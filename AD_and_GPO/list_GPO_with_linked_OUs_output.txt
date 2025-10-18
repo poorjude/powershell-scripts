@@ -1,0 +1,11 @@
+Имя;Статус;Привязанные OU
+Account_Lockout_Policy;Включена;Moscow_Office, Users
+Account_Password_Policy;Включена;Moscow_Office, Users
+Default Domain Policy;Включена;domain
+Soft_Upgrade;Отключена;Computers
+Soft_Installation;Включена;Computers
+Test_GPO;Отключена;
+WSUS_update;Включена;Computers
+
+
+
