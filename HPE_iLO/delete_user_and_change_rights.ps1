@@ -1,7 +1,7 @@
 ﻿Import-Module HPEiLOCmdlets
 
 # Загружаем список IP из файла
-$iLO_IP_list = (Get-Content -Path ".\iLO_IP_list.txt")
+$iLO_IP_list = (Get-Content -Path ".\delete_user_and_change_rights_input.txt")
 
 # Включаем стандартное логирование
 Enable-HPEiLOLog
