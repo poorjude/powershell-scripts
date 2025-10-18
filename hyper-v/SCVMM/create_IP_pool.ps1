@@ -4,7 +4,7 @@ $DNSSearchSuffix = "domain.local"
 $DNSServers = "192.168.1.34", "192.168.1.35", "8.8.8.8", "8.8.4.4"
 
 # Индивидуально для каждого IP pool
-$PoolName = "Mail - Moscow - 1197" # Называем по такому принципу: "Продукт - Месторасположение - VLAN ID"
+$PoolName = "Mail - Moscow - 1197" # Называем подсеть по такому принципу: "Продукт - Месторасположение - VLAN ID"
 $Description = "Product network for mail servers in Moscow"
 $LogNetDef = Get-SCLogicalNetworkDefinition -Name "Virtual_Switch_Moscow" -LogicalNetwork $LogicalNetwork
 $VLAN = "1197"
