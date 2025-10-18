@@ -1,0 +1,7 @@
+\\fileserver01\shares\share1
+\\fileserver01\shares\share2
+\\fileserver01\shares\share3
+\\fileserver01\shares\share4
+\\fileserver02\share1
+\\fileserver02\share2
+\\fileserver03\shares\share1

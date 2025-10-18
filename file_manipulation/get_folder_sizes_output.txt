@@ -1,0 +1,7 @@
+\\fileserver01\shares\share1;237.75
+\\fileserver01\shares\share2;58.69
+\\fileserver01\shares\share3;0.07
+\\fileserver01\shares\share4;81.41
+\\fileserver02\share1;0.03
+\\fileserver02\share2;0.03
+\\fileserver03\shares\share1;0.03
