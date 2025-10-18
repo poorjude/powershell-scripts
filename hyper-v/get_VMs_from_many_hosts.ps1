@@ -1,6 +1,4 @@
-﻿Import-Module Hyper-V
-
-$hvs = @(
+﻿$hvs = @(
     "servername01"
     "servername02"
     "servername03"
