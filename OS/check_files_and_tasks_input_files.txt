@@ -1,0 +1,4 @@
+C:\Users\*\AppData\Local\*\k.sys
+C:\Users\*\Downloads\dump.ps1
+C:\Users\Public\*\*.exe
+C:\Windows\Temp\tmp.exe

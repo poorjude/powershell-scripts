@@ -1,0 +1,34 @@
+Члены группы Admins
+Comment        Локальные администраторы
+Admin01
+Admin02
+Члены группы Users
+Comment        
+User01
+User02
+Ivanov.I
+Petrov.P
+Denisov.D
+Члены группы Share1_RW_Access
+Comment        Доступ на Share1 с правами read-write
+Petrov.P
+Denisov.D
+Члены группы Share1_R_Access
+Comment        Доступ на Share1 с правами read-only
+Petrov.P
+Denisov.D
+User02
+Члены группы Share2_RW_Access
+Comment        Доступ на \\Share2 с правами read-write
+Petrov.P
+Ivanov.I
+Члены группы Share2_R_Access
+Comment        Доступ на \\Share2 с правами read-only
+Члены группы Backup_RW_Access
+Comment        Доступ на \\Backup с правами read-write
+Admin01
+Admin02
+Члены группы Backup_R_Access
+Comment        Доступ на \\Backup с правами read-only
+User01
+User02
