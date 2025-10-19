@@ -21,15 +21,15 @@ foreach ($hv in $hvs) {
             ForEach-Object { $_.Name }
 
         # Создаём папку, если её нет
-        if (!(Test-Path $localExport)) {
-            New-Item -ItemType Directory -Path $localExport | Out-Null
+        if (!(Test-Path $using:localExport)) {
+            New-Item -ItemType Directory -Path $using:localExport | Out-Null
         }
 
         # Подключаем сетевой диск
-        New-PSDrive -Name "Z" -PSProvider FileSystem -Root $networkPath -Credential $credential -Persist
+        New-PSDrive -Name "Z" -PSProvider FileSystem -Root $using:networkPath -Credential $using:credential -Persist
 
         foreach ($vm in $vms) {
-            $vmExportPath = Join-Path $localExport $vm
+            $vmExportPath = Join-Path $using:localExport $vm
 
             Write-Host "Экспортирую ВМ: $vm в $vmExportPath..."
             Export-VM -Name $vm -Path $vmExportPath -CaptureLiveState CaptureDataConsistentState
