@@ -1,4 +1,6 @@
-﻿# Указываем DNS-серверы
+﻿Import-Module DnsServer
+
+# Указываем DNS-серверы
 $dns_servers = @(
     "dc1.domain1.local"
     "dc2.domain1.local"

@@ -1,4 +1,6 @@
-﻿$TTL = "00:20:00"
+﻿Import-Module DnsServer
+
+$TTL = "00:20:00"
 $PrimaryZoneName = "domain.local"
 $MiddleZoneName = ".subdomain.msk" # Указываем вместе с точкой в начале (или оставляем полностью пустую строку)
 
