@@ -18,7 +18,7 @@ $tasks_list = (Get-Content -Path ".\check_files_and_tasks_input_tasks.txt")
 $allScheduledTasks = Get-ScheduledTask
 
 Write-Host "Task scheduler check started" -BackgroundColor Green
-# Проходимся по каждой вирусной задаче
+# Проходимся по каждой задаче из списка
 foreach ($taskName in $tasks_list) {
     # Проходимся по каждой задаче на ПК
     foreach ($task in $allScheduledTasks) {
@@ -27,7 +27,7 @@ foreach ($taskName in $tasks_list) {
             # Останавливаем и дизейблим задачу
             Stop-ScheduledTask -TaskName $taskName
             Disable-ScheduledTask -TaskName $taskName
-            # Unregister-ScheduledTask -TaskName $virusTaskName -Confirm:$false
+            # Unregister-ScheduledTask -TaskName $taskName -Confirm:$false
         }
     }
 }
