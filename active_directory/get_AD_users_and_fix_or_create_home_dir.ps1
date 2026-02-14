@@ -13,6 +13,8 @@
     в которой будут создаваться домашние директории пользователей.
 #>
 
+Import-Module ActiveDirectory
+
 $rootShare = '\\FileServer01\HomeDir_root'
 
 ### I. Очищаем домашние директории для тестовых аккаунтов

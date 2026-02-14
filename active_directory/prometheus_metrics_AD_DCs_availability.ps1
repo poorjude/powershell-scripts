@@ -1,4 +1,6 @@
-﻿# Указываем файл .prom, в который будем писать метрики
+﻿Import-Module ActiveDirectory
+
+# Указываем файл .prom, в который будем писать метрики
 $promFile = "C:\Program Files\windows_exporter\textfile_inputs\ad_availability.prom"
 # Первично заполняем файл
 Set-Content -Path $promFile -Encoding ASCII `
