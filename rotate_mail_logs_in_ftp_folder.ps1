@@ -2,10 +2,10 @@
 $monthAgo = (Get-Date).AddMonths(-1)
 # Задаём директории
 $targetDirs = @(
-    "\\FileServer01\Share01",
-    "\\FileServer01\Share02",
-    "C:\LocalFolder01"
-)
+    "G:\ftp\postfix-logs",
+    "G:\ftp\mailcow"
+ )
+
 
 foreach ($targetDir in $targetDirs) {
     # Проверяем существование целевой директории
@@ -18,4 +18,5 @@ foreach ($targetDir in $targetDirs) {
     Get-ChildItem -Path $targetDir | 
         Where-Object { $_.LastWriteTime -lt $monthAgo } | 
         Remove-Item -Force -Confirm:$false -Recurse
+
 }
