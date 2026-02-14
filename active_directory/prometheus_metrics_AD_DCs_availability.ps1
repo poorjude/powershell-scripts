@@ -7,11 +7,11 @@ Add-Content -Path $promFile -Value "# TYPE ad_availability gauge"
 
 # Указываем домены, которые будем проверять
 $Domains = @('domain1.local', 'domain2.local', 'domain3.local')
-$DCs = @()
 
 foreach ($Domain in $Domains) {
     # Получаем информацию о DC
     $Error.Clear()
+    $DCs = @()
     $DCs = Get-ADDomain -Identity $Domain | Select-Object -ExpandProperty ReplicaDirectoryServers
     if ($Error.Count -eq 0) { $bit = 1 } else { $bit = 0 }
 
