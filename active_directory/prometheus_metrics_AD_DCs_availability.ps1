@@ -11,9 +11,12 @@ $DCs = @()
 
 foreach ($Domain in $Domains) {
     # Получаем информацию о DC
+    $Error.Clear()
     $DCs = Get-ADDomain -Identity $Domain | Select-Object -ExpandProperty ReplicaDirectoryServers
-    $bit = [int]($?)
+    if ($Error.Count -eq 0) { $bit = 1 } else { $bit = 0 }
+
     Add-Content -Path $promFile -Value "ad_availability{domain=""$Domain"",query=""initial_query""} $bit"
+
     # Если не удалось получить список DC, то пропускаем остальные проверки
     if(-not [bool]$bit) { continue }
 
@@ -27,7 +30,7 @@ foreach ($Domain in $Domains) {
             53   # DNS
         )
         foreach ($port in $ports) {
-            $bit = [int](Test-NetConnection -ComputerName $DC -Port $port).TcpTestSucceeded)
+            $bit = [int]((Test-NetConnection -ComputerName $DC -Port $port).TcpTestSucceeded)
             Add-Content -Path $promFile -Value "ad_availability{domain=""$Domain"",dc=""$DC"",query=""tcp_port_$port""} $bit"
         }
 
