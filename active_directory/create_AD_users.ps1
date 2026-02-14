@@ -1,4 +1,6 @@
-﻿function Generate-RandomPassword {
+﻿Import-Module ActiveDirectory
+
+function Generate-RandomPassword {
     param ([int]$Length)
 
     $chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789{}[]!@#$%^&*()_+-='.ToCharArray()
