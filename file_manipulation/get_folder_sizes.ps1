@@ -18,14 +18,14 @@ foreach ($folder in $folder_list) {
 
     # Если поймали ошибку - указываём её вместо размера папки
     if ($Error.Count -gt 0) {
-        # Пишем результат на консоль
+        # Пишем результат в консоль
         Write-Host ($folder + ": ОШИБКА - " + $Error[0].Exception.Message)
         # Пишем результат в файл
         Add-Content -Path $folder_sizes -Value ($folder + ";ОШИБКА - " + $Error[0].Exception.Message)
 
         $Error.Clear()
     } else {
-        # Пишем результат на консоль
+        # Пишем результат в консоль
         Write-Host ($folder + ": " + $curr_size)
         # Пишем результат в файл
         Add-Content -Path $folder_sizes -Value ($folder + ";" + $curr_size)
